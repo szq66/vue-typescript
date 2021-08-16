@@ -23,17 +23,17 @@ tslint.json ---语法检查配置文件
 
 ### 基于 vue + vuex + typescript + element-ui + axios 
 
-### 运行项目
+### 准备工作
 ```
 npm install
 ```
 
-#### 开发模式运行
+### 开发模式运行
 ```
 npm run serve
 ```
 
-#### 构建项目
+### 构建项目
 ```
 npm run build
 ```
