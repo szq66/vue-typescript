@@ -28,7 +28,7 @@ tslint.json ---语法检查配置文件
 npm install
 ```
 
-### 开发模式运行
+### 运行项目
 ```
 npm run serve
 ```
