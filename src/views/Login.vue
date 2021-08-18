@@ -6,13 +6,13 @@
     class="demo-ruleForm login-container"
     >
       <h3 class="title">用户登录</h3>
-      <el-form-item >
+      <el-form-item>
         <el-input type="text" v-model="user" auto-complete="off" placeholder="账号"></el-input>
       </el-form-item>
-      <el-form-item >
+      <el-form-item>
         <el-input type="password" v-model="pwd" auto-complete="off" placeholder="密码" @keyup.enter.native="checkUser"></el-input>
       </el-form-item>
-      <el-form-item style="width:100%;">
+      <el-form-item>
         <el-button type="primary" style="width:100%;" @click.native.prevent="checkUser">登录</el-button>
       </el-form-item>
     </el-form>
@@ -51,26 +51,26 @@ div {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
-}
-.login-container {
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  background-clip: padding-box;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  margin: auto;
-  width: 350px;
-  padding: 35px 35px 15px 35px;
-  background: #fff;
-  border: 1px solid #eaeaea;
-  box-shadow: 0 0 25px #cac6c6;
-  .title {
-    margin: 0px auto 40px auto;
-    text-align: center;
-    color: #505458;
+  .login-container {
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    background-clip: padding-box;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+    width: 350px;
+    padding: 35px 35px 15px 35px;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 0 25px #cac6c6;
+    .title {
+      margin: 0px auto 40px auto;
+      text-align: center;
+      color: #505458;
+    }
   }
-  z-index: 999;
 }
+
 </style>
