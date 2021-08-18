@@ -62,8 +62,10 @@ div.bg {
     border: 1px solid #eaeaea;
     box-shadow: 0 0 25px #cac6c6;
     .title {
-      margin: 0px auto 40px auto;
       color: #505458;
+      .el-divider {
+        margin: 10px auto 60px auto;
+      }
       .el-divider__text {
         font-size: 24px;
         letter-spacing: 5px;
