@@ -1,16 +1,12 @@
 <template>
-  <div>
-    <el-form
-    label-position="left"
-    label-width="0px"
-    class="demo-ruleForm login-container"
-    >
-      <h3 class="title">用户登录</h3>
+  <div class="bg">
+    <el-form label-position="left" label-width="0px" class="login-container">
+      <div class="title"><el-divider>用户登录</el-divider></div>
       <el-form-item>
-        <el-input type="text" v-model="user" auto-complete="off" placeholder="账号"></el-input>
+        <el-input type="text" prefix-icon="el-icon-user" v-model="user" auto-complete="off" placeholder="账号"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-input type="password" v-model="pwd" auto-complete="off" placeholder="密码" @keyup.enter.native="checkUser"></el-input>
+        <el-input type="password" prefix-icon="el-icon-lock" v-model="pwd" auto-complete="off" placeholder="密码" @keyup.enter.native="checkUser"></el-input>
       </el-form-item>
       <el-form-item>
         <el-button type="primary" style="width:100%;" @click.native.prevent="checkUser">登录</el-button>
@@ -45,7 +41,7 @@ export default class  extends Vue {
   50% {background-position: 100% 50%;}
   100% {background-position: 0% 50%;}
 }
-div {
+div.bg {
   width: 100%;
   height: 100%;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -67,10 +63,20 @@ div {
     box-shadow: 0 0 25px #cac6c6;
     .title {
       margin: 0px auto 40px auto;
-      text-align: center;
       color: #505458;
+      .el-divider__text {
+        font-size: 24px;
+        letter-spacing: 5px;
+      }
+    }
+    .el-input /deep/ .el-input__prefix {
+      margin-left: 2px;
+      font-size: 18px;
+    }
+    .el-input /deep/ .el-input__inner, .el-button {
+      border-radius: 25px;
+      font-size: 24px;
     }
   }
 }
-
 </style>

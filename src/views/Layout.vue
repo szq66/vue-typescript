@@ -9,7 +9,7 @@
         </el-col>
         <el-col :span="4" class="userinfo">
           <el-dropdown trigger="hover">
-            <span class="el-dropdown-link userinfo-inner">个人中心</span>
+            <span class="el-dropdown-link userinfo-inner">个人中心<i class="el-icon-arrow-down"></i></span>
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item>基本资料</el-dropdown-item>
               <el-dropdown-item>修改密码</el-dropdown-item>
@@ -107,6 +107,9 @@ export default class  extends Vue {
       .userinfo-inner {
         cursor: pointer;
         color: #fff;
+        i {
+          margin-left: 3px;
+        }
         img {
           width: 40px;
           height: 40px;
