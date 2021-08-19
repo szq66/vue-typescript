@@ -8,7 +8,7 @@
           </el-form-item>
         </el-form>
       </el-col>
-      <el-table style="font-size: 13px" :data="bookListData" highlight-current-row>
+      <el-table :data="bookListData" highlight-current-row>
         <el-table-column label="序号" type="index" width="80px" align="center">
           <template slot-scope="scope">
             <span>{{(page - 1) * size + scope.$index + 1}}</span>
@@ -26,7 +26,7 @@
         </el-table-column>
       </el-table>
       <el-col :span="24" class="toolbar">
-        <div class="block" style="float:right;">
+        <div class="block">
           <el-pagination
             @size-change="handleSizeChange"
             @current-change="handlePageChange"
@@ -104,4 +104,12 @@ export default class extends Vue {
 }
 </script>
 <style lang="scss" scoped>
+section {
+  .el-table {
+    font-size: 24px;
+  }
+  .el-pagination {
+    float: right;
+  }
+}
 </style>
