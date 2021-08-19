@@ -1,4 +1,4 @@
-# vue-typescript-admin
+# vue-typescript
 
 ### 项目结构
 ```javascript
