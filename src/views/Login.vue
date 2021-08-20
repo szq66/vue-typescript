@@ -9,7 +9,13 @@
         <el-input type="password" prefix-icon="el-icon-lock" v-model="pwd" auto-complete="off" placeholder="密码" @keyup.enter.native="checkUser"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" style="width:100%;" @click.native.prevent="checkUser">登录</el-button>
+        <el-button type="primary" @click.native.prevent="checkUser">登录</el-button>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary">账号注册</el-button>
+      </el-form-item>
+      <el-form-item>
+        <el-link type="info" :underline="false" href="javascript: void(0);">忘记密码？</el-link>
       </el-form-item>
     </el-form>
   </div>
@@ -57,14 +63,14 @@ div.bg {
     transform: translateY(-50%);
     margin: auto;
     width: 350px;
-    padding: 35px 35px 15px 35px;
+    padding: 35px 35px 0 35px;
     background: #fff;
     border: 1px solid #eaeaea;
     box-shadow: 0 0 25px #cac6c6;
     .title {
       color: #505458;
       .el-divider {
-        margin: 10px auto 60px auto;
+        margin: 10px auto 50px auto;
       }
       .el-divider__text {
         font-size: 24px;
@@ -73,11 +79,22 @@ div.bg {
     }
     .el-input /deep/ .el-input__prefix {
       margin-left: 2px;
-      font-size: 18px;
+      font-size: 20px;
     }
     .el-input /deep/ .el-input__inner, .el-button {
+      height: 50px;
       border-radius: 25px;
       font-size: 24px;
+      width: 100%;
+    }
+    .el-link {
+      font-size: 16px;
+      line-height: 20px;
+      display: block;
+      text-align: center;
+      &:hover {
+        color: rgb(64, 158, 255);
+      }
     }
   }
 }
