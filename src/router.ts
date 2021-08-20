@@ -32,12 +32,14 @@ export default new Router({
         {
           path: '/index',
           name: '首页',
-          component: Index,
+          meta: { requiresAuth: true },
+          component: Index
         },
         {
           path: '/book/index',
           name: '图书管理',
-          component: BookTable,
+          meta: { requiresAuth: true },
+          component: BookTable
         },
       ]
     },
