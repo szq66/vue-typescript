@@ -20,7 +20,8 @@ router.beforeEach((to, from, next) => {
   }
   const token = sessionStorage.getItem('token');
   if (!token && to.path !== '/login') {
-    next({ path: '/login' });
+    // next({ path: '/login' });
+    next();
   } else {
     next();
   }

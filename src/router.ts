@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Layout from '@/views/Layout.vue';
 import Login from '@/views/Login.vue';
+import Register from '@/views/Register.vue';
 import NotFound from '@/views/NotFound.vue';
 import BookTable from '@/views/bookAdmin/BookTable.vue';
 import Index from '@/views/indexPage/Index.vue';
@@ -17,6 +18,11 @@ export default new Router({
       path: '/login',
       name: '登录',
       component: Login,
+    },
+    {
+      path: '/register',
+      name: '注册',
+      component: Register,
     },
     {
       path: '/',

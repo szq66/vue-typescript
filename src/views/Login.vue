@@ -12,7 +12,7 @@
         <el-button type="primary" @click.native.prevent="checkUser">登录</el-button>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary">账号注册</el-button>
+        <el-button type="primary" @click.native.prevent="$router.push('/register');">账号注册</el-button>
       </el-form-item>
       <el-form-item>
         <el-link type="info" :underline="false" href="javascript: void(0);">忘记密码？</el-link>
@@ -29,7 +29,6 @@ import { Component, Vue, Watch, Prop } from "vue-property-decorator";
 export default class  extends Vue {
   private user: string = 'admin';
   private pwd: string = 'admin';
-  private isCollapse: boolean = false;
   private checkUser() {
     if (this.user === 'admin' && this.pwd === 'admin') {
       sessionStorage.setItem('token', 'token-fake');
@@ -42,60 +41,5 @@ export default class  extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@keyframes gradientBG {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
-}
-div.bg {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-  .login-container {
-    -webkit-border-radius: 25px;
-    border-radius: 25px;
-    -moz-border-radius: 25px;
-    background-clip: padding-box;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: auto;
-    width: 350px;
-    padding: 35px 35px 0 35px;
-    background: #fff;
-    border: 1px solid #eaeaea;
-    box-shadow: 0 0 25px #cac6c6;
-    .title {
-      color: #505458;
-      .el-divider {
-        margin: 10px auto 50px auto;
-      }
-      .el-divider__text {
-        font-size: 24px;
-        letter-spacing: 5px;
-      }
-    }
-    .el-input /deep/ .el-input__prefix {
-      margin-left: 2px;
-      font-size: 20px;
-    }
-    .el-input /deep/ .el-input__inner, .el-button {
-      height: 50px;
-      border-radius: 25px;
-      font-size: 24px;
-      width: 100%;
-    }
-    .el-link {
-      font-size: 16px;
-      line-height: 20px;
-      display: block;
-      text-align: center;
-      &:hover {
-        color: rgb(64, 158, 255);
-      }
-    }
-  }
-}
+@import "@/assets/container.scss";
 </style>
