@@ -18,12 +18,10 @@ router.beforeEach((to: any, from, next) => {
   if (to.meta.requiresAuth) {
     if (sessionStorage.getItem('token')) {
       next();
-    }
-    else {
+    } else {
       Message.error('请先登录！');
       next({ path: '/login' });
     }
-  }
-  else { next(); }
+  } else { next(); }
 });
 
